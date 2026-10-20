@@ -11,7 +11,11 @@
     "04": "tsx src/04-path-module.ts",
     "05":"tsx src/05-timers-module.ts",
     "06": "tsx src/06-callback-promises-async-await",
-    "07": "tsx src/07-fs-module.ts"
+    "07": "tsx src/07-fs-module.ts",
+    "08": "tsx src/08-buffers.ts",
+    "09": "tsx src/09-url-module.ts",
+    "10": "tsx src/10-event-emitters.ts",
+    "11": "tsx src/11-streams.ts"
   },
   "keywords": [],
   "author": "",
