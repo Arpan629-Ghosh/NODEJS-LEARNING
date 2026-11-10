@@ -15,7 +15,10 @@
     "08": "tsx src/08-buffers.ts",
     "09": "tsx src/09-url-module.ts",
     "10": "tsx src/10-event-emitters.ts",
-    "11": "tsx src/11-streams.ts"
+    "11": "tsx src/11-streams.ts",
+    "12": "tsx src/12-passwordHashing.ts",
+    "13": "tsx src/13-encryption-decryption.ts",
+    "14": "tsx src/14-digital-signature.ts"
   },
   "keywords": [],
   "author": "",

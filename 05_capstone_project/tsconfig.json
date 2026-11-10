@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES2022" /* Target latest stable Node.js runtime features. */,
+    "module": "NodeNext" /* Required for modern Node.js ESM resolution. */,
+    "moduleResolution": "NodeNext" /* Tells TS how to look up files matching Node.js behavior. */,
+    "rootDir": "./src" /* Location of your TypeScript source files. */,
+    "outDir": "./dist" /* Location where compiled JavaScript goes. */,
+    "strict": true /* Enables strict type-checking options. */,
+    "esModuleInterop": true /* Ensures compatibility between CommonJS and ESM. */,
+    "skipLibCheck": true /* Skip type checking of declaration files (*.d.ts). */,
+    "forceConsistentCasingInFileNames": true /* Disallow inconsistently-cased references. */,
+    "types": ["node"]
+  },
+  "include": ["src/**/*"] /* Compile all files in the src directory. */,
+  "exclude": ["node_modules", "dist"] /* Folders for the compiler to ignore. */
+}
