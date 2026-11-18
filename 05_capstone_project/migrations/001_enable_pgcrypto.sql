@@ -1,0 +1,1 @@
+CREATE EXTENSION IF NOT EXISTS "pgcrypto"; --  installs and enables the built-in pgcrypto module in your current database, allowing you to use cryptographic functions—such as hashing passwords, encrypting data, and generating random UUIDs—directly inside SQL queries.
