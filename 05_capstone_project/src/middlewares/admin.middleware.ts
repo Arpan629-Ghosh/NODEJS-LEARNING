@@ -7,7 +7,7 @@ export function requireAdmin(
     _res: Response,
     next: NextFunction,
 ): void {
-    if(req.user?.role !== "Admin"){
+    if(req.user?.role !== "ADMIN"){
         next(new AppError(403, "User is not allow to this feature!"));
         return;
     }

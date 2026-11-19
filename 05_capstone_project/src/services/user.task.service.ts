@@ -1,5 +1,5 @@
 import { AppError } from "../errors/AppError";
-import { createTask, findTaskById, getTasksByUserId } from "../repository/user.task.repository";
+import { createTask, deleteTaskById, findTaskById, getTasksByUserId, updateTaskById } from "../repository/user.task.repository";
 import { Task } from "../types/task";
 
 function validateTitle(title: unknown): string{
@@ -40,4 +40,33 @@ export async function getUserTask(taskId:string, userId: string): Promise<Task> 
     }
 
     return task;
+}
+
+export async function updateUserTask(taskId: string, userId: string, taskTitle: string): Promise<Task>{
+
+    if (!/^[0-9a-f]{8}-(?:[0-9a-f]{4}-){3}[0-9a-f]{12}$/i.test(taskId)) {
+        throw new AppError(400, "Invalid task ID");
+    }
+
+    const validTitle = validateTitle(taskTitle);
+    const task = await updateTaskById(taskId, userId, validTitle);
+
+    if(!task){
+        throw new AppError(404, "Task not found");
+    }
+
+    return task;
+}
+
+export async function deleteUserTask(taskId:string, userId: string): Promise<void> {
+    
+    if (!/^[0-9a-f]{8}-(?:[0-9a-f]{4}-){3}[0-9a-f]{12}$/i.test(taskId)) {
+        throw new AppError(400, "Invalid task ID");
+    }
+
+    const deleted = await deleteTaskById(taskId, userId);
+
+    if(!deleted){
+        throw new AppError(404, "Task not found");
+    }
 }
